@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width , initial-scale=1.0 , shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Rakibul Hassan Rifat" />
+
+    <title>Second</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Raleway:300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="x-icon/image"
+      href="https://placehold.co/32x32/2c3e50/fff?text=L"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
+      integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Awesome Icon CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Aos Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
+
+    <style>
+      /* @font-face {
+        font-family: Abel;
+        src: url("../vendor/fonts/Abel/Abel-Regular.ttf");
+      }*/
+
+      /* - Josefin*/
+      /* @font-face {
+        font-family: Josefin;
+        src: url("../vendor/fonts/Josefin_Sans/JosefinSans-Regular.ttf");
+      } */
+
+      /* - Lexend*/
+      /* @font-face {
+        font-family: Lexend;
+        src: url("../vendor/fonts/Lexend_Deca/LexendDeca-Regular.ttf");
+      } */
+
+      /*========Variable Section Start========*/
+      :root {
+        /*Theme Colors*/
+        --text-gray: #3f4954;
+        --text-light: #686666da;
+        --bg-color: #0f0f0f;
+        --white: #ffffff;
+        --mid-night: #104f55;
+
+        /*Gradient Color*/
+        --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+        --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+        --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+        /*=========Font Family==========*/
+
+        /*Abel -Navbar*/
+        --Abel: "Abel", cursive;
+
+        /*Josefin_Sans*/
+        --Josefin: "Josefin", cursive;
+
+        /*Lexend*/
+        --Lexend: "Lexend", cursive;
+      }
+      /*========Variable Section End========*/
+
+      /*=======01) Global CSS Section=======*/
+      h1 {
+        font-family: var(--Josefin);
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-family: var(--Lexend);
+        font-size: 28px;
+        color: #576671;
+      }
+      h3 {
+        font-family: var(--Abel);
+        font-size: 1.5rem;
+      }
+      p {
+        font-family: var(--Lexend);
+        font-size: 13px;
+        text-align: center;
+        line-height: 35px;
+      }
+      span {
+        font-family: var(--Abel);
+      }
+
+      section {
+        padding: 90px 0;
+      }
+      .img-center {
+        display: block;
+        margin: 0 auto;
+      }
+      .no-padding {
+        padding: 0;
+      }
+      .primary {
+        color: #17daa3;
+      }
+      .heading-space {
+        padding-bottom: 40px;
+      }
+      .topbar {
+        /*position: fixed;
+width: 100%;
+top: -1px;
+left: 0;
+right: 0;*/
+        background: var(--mid-night);
+        box-shadow: var(--box-shadow);
+        z-index: 999;
+        transition: all 1s ease;
+        padding: 0;
+      }
+
+      /*=======02) Header Section=======*/
+      header .navbar-brand img {
+        width: 50%;
+        filter: brightness(0) invert(1);
+      }
+      header .navbar-brand span {
+        font-family: "Dosis", sans-serif;
+      }
+      header ul li {
+        font-variant: small-caps;
+        padding: 0 10px;
+      }
+      header ul li a:hover {
+        color: #17daa3 !important;
+      }
+      #slider1 ol li,
+      #slider2 ol li {
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+      }
+      #slider1 .carousel-caption {
+        top: 285px;
+      }
+      #slider1 .carousel-caption button {
+        border-radius: 20px 20px;
+      }
+
+      /*========03) About Section=======*/
+      #about span,
+      #our-service span,
+      #team span,
+      #pricing span {
+        height: 5px;
+        width: 50px;
+        display: inline-block;
+        background: #424242;
+      }
+      .abt-content-logo {
+        color: #87949e;
+        font-size: 40px;
+        width: 120px;
+        background: #edeff1;
+        height: 120px;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding: 20px;
+      }
+      .abt-content-logo:hover {
+        background: #17daa3;
+        color: #fff;
+        cursor: pointer;
+      }
+      .abt-head {
+        margin-top: 30px;
+      }
+      .abt-btn {
+        margin-top: 50px;
+        background: #0bca94;
+        border: 1px solid #0bca94;
+        padding: 8px 22px;
+        border-radius: 20px 20px;
+      }
+      .abt-btn:hover {
+        background: #fff;
+        border: 1px solid #0bca94;
+        color: #333;
+        padding: 8px 22px;
+      }
+
+      /*========04) Purpose Section=======*/
+      #purpose {
+        background: #f9f9fa;
+      }
+      #purpose img,
+      #proposal img {
+        max-height: 400px;
+        border-radius: 5px;
+      }
+      .purpose-content,
+      .proposal-content {
+        padding: 55px 0;
+      }
+      .purpose-content small,
+      .proposal-content small {
+        display: block;
+        line-height: 30px;
+        padding: 25px 0px;
+        margin-right: 80px;
+        text-align: justify;
+      }
+      /*========05) Proposal Section=======*/
+
+      /*========06) Testimonial Section=======*/
+      .crs-img-1 {
+        background: url("https://placehold.co/320x156/2c3e50/fff?text=320x156");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+      }
+      .crs-img-2 {
+        background: url("https://placehold.co/320x156/2c3e50/fff?text=320x156");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+      }
+      .crs-img-3 {
+        background: url("https://placehold.co/320x156/2c3e50/fff?text=320x156");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+      }
+      .crs-img-4 {
+        background: url("https://placehold.co/320x156/2c3e50/fff?text=320x156");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+      }
+      #myCarousel .carousel-item {
+        height: 500px;
+      }
+      #myCarousel .carousel-caption {
+        top: 75px;
+      }
+      #myCarousel .carousel-caption img {
+        width: 90px;
+        border-radius: 50%;
+        height: 90px;
+      }
+      #myCarousel .carousel-caption h4 {
+        padding: 15px 0;
+        color: white;
+      }
+      #myCarousel .carousel-caption span {
+        color: #0bca94;
+      }
+      #myCarousel .carousel-caption ssmallpan {
+        color: white;
+      }
+
+      /*========07) Our Service Section*/
+
+      #our-service {
+        background: #f9f9fa;
+      }
+      #our-service .os-main {
+        margin-top: 50px;
+      }
+      #our-service .os-logo {
+        font-size: 35px;
+        color: #17daa3;
+        width: 80px;
+        height: 80px;
+        background: #fff;
+        padding: 13px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      /*========08) Team Section*/
+      #team .card {
+        transition: all 0.7s ease;
+      }
+      #team .card:hover {
+        border: none;
+        background: #17daa3;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+        transform: scale(1.1);
+      }
+
+      /*========09) Pricing Section*/
+
+      #pricing {
+        background: #f9f9fa;
+      }
+      #pricing .card h2 {
+        color: #17daa3;
+        cursor: pointer;
+      }
+      #pricing .card-header {
+        padding: 30px 10px;
+      }
+      #pricing .card-footer {
+        padding: 1px;
+        overflow: hidden;
+      }
+      #pricing .btn {
+        background: #17daa3;
+        border-radius: 2px;
+        border-style: none;
+        text-transform: uppercase;
+        transition: all 0.5s ease;
+      }
+      #pricing .btn:hover {
+        transform: scale(1.1);
+      }
+      #pricing .btn:focus,
+      #pricing .btn:active {
+        outline: none !important;
+        box-shadow: none;
+      }
+      #pricing .svg-inline--fa.fa-briefcase.fa-w-16.float-right {
+        font-size: 20px;
+        margin-left: 115px;
+      }
+
+      /*========10) Location Section*/
+
+      /*========11) Try Us Section*/
+      #try-us {
+        background: url("https://placehold.co/320x156/2c3e50/fff?text=320x156")
+          no-repeat;
+        background-size: cover;
+        min-height: 400px;
+        background-position: center;
+      }
+
+      /*========12) Footer Section=======*/
+
+      footer {
+        background: var(--bg-color);
+        position: relative;
+      }
+      footer h3 {
+        color: var(--white);
+      }
+      footer form .btn-custom {
+        padding: 8px;
+        border-radius: 0 !important;
+        width: 100%;
+        margin-top: 10px;
+      }
+      footer img {
+        margin-bottom: 10px;
+      }
+      footer a {
+        color: var(--white);
+        padding: 15px 5px;
+      }
+      footer a:hover {
+        color: var(--mid-night);
+      }
+      footer p {
+        color: var(--text-gray);
+        text-align: center;
+      }
+
+      /*=======Media Query======*/
+      @media (max-width: 991px) {
+        #slider1 .carousel-caption {
+          top: 220px;
+        }
+        #team .team-sqd,
+        #pricing .pricing-sqd {
+          margin-bottom: 10px;
+        }
+      }
+      @media (max-width: 919px) {
+        footer .container,
+        footer .container .row {
+          margin: 0;
+        }
+        footer #insta {
+          display: contents;
+        }
+      }
+      @media (max-width: 767px) {
+        #slider1 .carousel-caption {
+          top: 155px;
+        }
+
+        #pricing .card .prcs-footer label:last-child {
+          width: 10%;
+        }
+        footer .footer-up {
+          margin-bottom: 15px;
+        }
+        footer #insta,
+        footer #follow {
+          width: 65%;
+        }
+      }
+
+      @media (max-width: 575px) {
+        header .navbar-brand img {
+          width: 40%;
+        }
+        #slider1 .carousel-caption {
+          top: 100px;
+        }
+        #slider1 .carousel-caption p {
+          line-height: 1;
+        }
+        .purpose-content,
+        .proposal-content {
+          margin: 0 auto;
+          width: 85%;
+        }
+      }
+      @media (max-width: 490px) {
+        #slider1 .carousel-caption {
+          top: 75px;
+        }
+        #slider1 .carousel-caption h2 {
+          font-size: 24px;
+        }
+        #myCarousel .carousel-caption {
+          top: 17px;
+        }
+        #myCarousel .carousel-caption h4 {
+          font-size: 19px;
+        }
+        #myCarousel .carousel-caption img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      @media (max-width: 395px) {
+        #slider1 .carousel-caption {
+          top: 75px;
+        }
+        header .navbar-brand {
+          margin: 0;
+          width: 80%;
+        }
+        #slider1 .carousel-caption p {
+          display: none;
+        }
+        .abt-content h4 {
+          margin-top: 0;
+        }
+        .abt-content small {
+          margin-bottom: 10px;
+          display: block;
+        }
+        #purpose {
+          padding-bottom: 0;
+        }
+
+        #proposal {
+          padding: 0;
+        }
+        #myCarousel .carousel-caption h4 {
+          padding: 0;
+        }
+        footer p {
+          width: 78%;
+        }
+      }
+
+      @media (max-width: 335px) {
+        header nav .navbar-toggler {
+          margin: 0 auto;
+          width: 20%;
+          border: none;
+        }
+        #slider1 .carousel-caption h2 {
+          font-size: 18px;
+        }
+        #slider1 .carousel-caption button {
+          padding: 6px;
+          display: block;
+          font-size: 10px;
+          margin: 0 auto;
+          border-radius: 15px 15px;
+        }
+        .purpose-content small,
+        .proposal-content small {
+          line-height: 1.5;
+        }
+        #myCarousel .carousel-caption {
+          top: 0px;
+        }
+        #slider2 .carousel-item h4 {
+          font-size: 15px;
+          margin-bottom: 0;
+        }
+        #myCarousel .carousel-caption small {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
+    <!-- Header Section Start-->
+    <header id="header">
+      <!-- Navigation Section Start-->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark fixed-top navigation"
+        id="mainNav"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand js-scroll-trigger"
+            href="#page-top"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://placehold.co/184x91/22c55e/fff?text=184x91"
+              class="img-fluid"
+            />
+            <span class="px-2">Site Name</span>
+          </a>
+
+          <!-- Navbar Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar -->
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#page-top">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#purpose"> Work </a>
+              </li>
+              <span></span>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#our-service">
+                  Service
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#pricing"> Blog </a>
+              </li>
+              <li>
+                <a class="nav-link js-scroll-trigger" href="#page-top">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navigation Section End -->
+
+      <div class="overlay bg-dark">
+        <!-- Carousel Slider Start -->
+        <div id="slider1" class="carousel slide" data-ride="carousel">
+          <!-- Carousel Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#slider1" data-slide-to="0" class="active"></li>
+            <li data-target="#slider1" data-slide-to="1"></li>
+            <li data-target="#slider1" data-slide-to="2"></li>
+            <li data-target="#slider1" data-slide-to="3"></li>
+            <li data-target="#slider1" data-slide-to="4"></li>
+          </ol>
+
+          <!-- Carousel Inner Section -->
+          <div class="carousel-inner" role="listbox">
+            <!-- Carousel Item no 1 -->
+            <div
+              class="carousel-item active"
+              style="
+                height: 800px;
+                background-image: url(https://placehold.co/1920x880/2c3e50/fff?text=1920x880);
+              "
+            >
+              <div
+                class="carousel-caption"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h2 class="text-light">Lorem Ipsum Dollar</h2>
+                <p>
+                  Hello, Welcome to our website. Thanks for stay connected with
+                  us.
+                </p>
+                <button class="btn btn-outline-light">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Carousel Item no 2 -->
+            <div
+              class="carousel-item"
+              style="
+                height: 800px;
+                background-image: url(https://placehold.co/1920x880/2c3e50/fff?text=1920x880);
+              "
+            >
+              <div class="carousel-caption">
+                <h2 class="text-light">Lorem Ipsum Sit Amet</h2>
+                <p>
+                  Hello, Welcome to our website. Thanks for stay connected with
+                  us.
+                </p>
+                <button class="btn btn-outline-light">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Carousel Item no 3 -->
+            <div
+              class="carousel-item"
+              style="
+                height: 800px;
+                background-image: url(https://placehold.co/1920x880/2c3e50/fff?text=1920x880);
+              "
+            >
+              <div class="carousel-caption">
+                <h2 class="text-light">Lorem Ipsum Sit Amet</h2>
+                <p>
+                  Hello, Welcome to our website. Thanks for stay connected with
+                  us.
+                </p>
+                <button class="btn btn-outline-light">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Carousel Item no 4 -->
+            <div
+              class="carousel-item"
+              style="
+                height: 800px;
+                background-image: url(https://placehold.co/1920x880/2c3e50/fff?text=1920x880);
+              "
+            >
+              <div class="carousel-caption">
+                <h2 class="text-light">Lorem Ipsum Sit Amet</h2>
+                <p>
+                  Hello, Welcome to our website. Thanks for stay connected with
+                  us.
+                </p>
+                <button class="btn btn-outline-light">Learn More</button>
+              </div>
+            </div>
+
+            <!-- Carousel Item no 5 -->
+            <div
+              class="carousel-item"
+              style="
+                height: 800px;
+                background-image: url(https://placehold.co/1920x880/2c3e50/fff?text=1920x880);
+              "
+            >
+              <div class="carousel-caption">
+                <h2 class="text-light">Lorem Ipsum Dollar Sit</h2>
+                <p>
+                  Hello, Welcome to our website. Thanks for stay connected with
+                  us.
+                </p>
+                <button class="btn btn-outline-light">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Control Icon -->
+          <a href="#slider1" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#slider3" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- About Section Start -->
+    <section id="about">
+      <div class="container">
+        <!-- About Heading -->
+        <div class="row heading-space">
+          <div
+            class="col-md-12 text-center"
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+          >
+            <h2>About Us</h2>
+            <span></span>
+            <p class="mt-3">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </p>
+          </div>
+        </div>
+
+        <!-- About Main Content -->
+        <div class="row text-center">
+          <!-- 1st Content -->
+          <div
+            class="col-md-3 col-sm-6 abt-content"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <div class="abt-content-logo">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4 class="py-3 abt-head">Lorem ipsum</h4>
+            <small class="text-muted p-2">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </small>
+          </div>
+
+          <!-- 2nd Content -->
+          <div
+            class="col-md-3 col-sm-6 abt-content"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <div class="abt-content-logo">
+              <i class="fab fa-asymmetrik"></i>
+            </div>
+            <h4 class="py-3 abt-head">Lorem ipsum</h4>
+            <small class="text-muted p-2">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </small>
+          </div>
+
+          <!-- 3rd Content -->
+          <div
+            class="col-md-3 col-sm-6 abt-content"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            <div class="abt-content-logo">
+              <i class="fas fa-atom"></i>
+            </div>
+            <h4 class="py-3 abt-head">Lorem ipsum</h4>
+            <small class="text-muted p-2">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </small>
+          </div>
+
+          <!-- 4th Content -->
+          <div
+            class="col-md-3 col-sm-6 abt-content"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            <div class="abt-content-logo">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h4 class="py-3 abt-head">Lorem ipsum</h4>
+            <small class="text-muted p-2">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </small>
+          </div>
+        </div>
+
+        <!-- Learn More Button -->
+        <div class="row">
+          <div
+            class="col-md-12 text-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <button class="abt-btn btn btn-primary">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Purpose Section Start -->
+    <section id="purpose">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <img
+              src="https://placehold.co/2304x1728/2c3e50/fff?text=2304x1728"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 purpose-content">
+            <h2 data-aos="fade-left" data-aos-delay="100">Lorem ipsum</h2>
+            <small data-aos="fade-left" data-aos-delay="200">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+              Pellentesque hendrerit suscipit mi eu lobortis. Curabitur
+              consectetur enim id elementum accumsan. Quisque metus purus,
+              iaculis id tincidunt non, blandit quis sapien.
+            </small>
+            <button
+              class="abt-btn btn btn-primary"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Purpose Section End -->
+
+    <!-- Proposal Section  Start-->
+    <section id="proposal">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 proposal-content">
+            <h2 data-aos="fade-right" data-aos-delay="100">Lorem ipsum</h2>
+            <small data-aos="fade-right" data-aos-delay="200">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+              Pellentesque hendrerit suscipit mi eu lobortis. Curabitur
+              consectetur enim id elementum accumsan. Quisque metus purus,
+              iaculis id tincidunt non, blandit quis sapien.
+            </small>
+            <button
+              class="abt-btn btn btn-primary"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
+              Learn more
+            </button>
+          </div>
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <img
+              src="https://placehold.co/2304x1728/2c3e50/fff?text=2304x1728"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Proposal Section End-->
+
+    <!-- Testimonial Section Start -->
+    <section id="testimonial">
+      <div class="bg-dark">
+        <!-- Carousel Section -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item crs-img-1 active">
+              <div class="container">
+                <div class="carousel-caption">
+                  <img
+                    src="https://placebeard.it/450x450/11"
+                    class="img-fluid"
+                    alt="Testimonial Person"
+                  />
+                  <h4>
+                    <span>Alecto</span> lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                  </h4>
+                  <small>Adam Czajkowski, Founder at Sys.co</small>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item crs-img-2">
+              <div class="container">
+                <div class="carousel-caption">
+                  <img
+                    src="https://placebeard.it/450x450/1"
+                    class="img-fluid"
+                    alt="Testimonial Person"
+                  />
+                  <h4>
+                    <span>Alecto</span> lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                  </h4>
+                  <small>Adam Czajkowski, Founder at Sys.co</small>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item crs-img-3">
+              <div class="container">
+                <div class="carousel-caption">
+                  <img
+                    src="https://placebeard.it/450x450/3"
+                    class="img-fluid"
+                    alt="Testimonial Person"
+                  />
+                  <h4>
+                    <span>Alecto</span> lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                  </h4>
+                  <small>Adam Czajkowski, Founder at Sys.co</small>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item crs-img-4">
+              <div class="container">
+                <div class="carousel-caption">
+                  <img
+                    src="https://placebeard.it/450x450/5"
+                    class="img-fluid"
+                    alt="Testimonial Person"
+                  />
+                  <h4>
+                    <span>Alecto</span> lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                  </h4>
+                  <small>Adam Czajkowski, Founder at Sys.co</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Our Service Section Start -->
+    <section id="our-service">
+      <div class="container">
+        <!-- Our Service Heading -->
+        <div class="row heading-space">
+          <div
+            class="col-md-12 text-center"
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+          >
+            <h2>Our Service</h2>
+            <span></span>
+            <p class="mt-3">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </p>
+          </div>
+        </div>
+
+        <!-- Our Service Main Content -->
+
+        <!-- 1st row -->
+        <div class="row os-main">
+          <!-- 1st Content -->
+          <div class="col-md-2" data-aos="flip-up" data-aos-delay="100">
+            <div class="os-logo text-center">
+              <i class="fas fa-briefcase"></i>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <h2>Portfolio</h2>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+            </p>
+          </div>
+
+          <!-- 2nd Content -->
+          <div class="col-md-2" data-aos="flip-up" data-aos-delay="100">
+            <div class="os-logo text-center">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <h2>Design</h2>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2nd row -->
+        <div class="row os-main">
+          <!-- 3rd Content -->
+          <div class="col-md-2" data-aos="flip-up" data-aos-delay="100">
+            <div class="os-logo text-center">
+              <i class="fab fa-battle-net"></i>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <h2>Branding</h2>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+            </p>
+          </div>
+
+          <!-- 4th Content -->
+          <div class="col-md-2" data-aos="flip-up" data-aos-delay="100">
+            <div class="os-logo text-center">
+              <i class="fas fa-rocket"></i>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <h2>Development</h2>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Service Section End -->
+
+    <!-- Team Section Start -->
+    <section id="team">
+      <div class="container">
+        <!-- Team Main Heading -->
+        <div class="row heading-space">
+          <div class="col-md-12 text-center">
+            <h2>Our Team</h2>
+            <span></span>
+            <p class="mt-3">
+              Nam varius accumsan elementum. Aliquam fermentum eros in suscipit
+              scelerisque.
+            </p>
+          </div>
+        </div>
+
+        <!-- Team Main Content -->
+        <div class="row">
+          <!-- 1st Team Person -->
+          <div class="col-lg-3 col-md-6 col-sm-6 team-sqd">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://placebeard.it/450x450/11"
+                alt="Team Person"
+              />
+
+              <div class="card-body">
+                <h3>Adam Suarez</h3>
+                <p>Senior Programmer</p>
+                <small class="text-muted">Alec. to Soft, California</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2nd Team Person -->
+          <div class="col-lg-3 col-md-6 col-sm-6 team-sqd">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://placebeard.it/450x450/1"
+                alt="Team Person"
+              />
+
+              <div class="card-body">
+                <h3>Lina Suarez</h3>
+                <p>Full Stack Developer</p>
+                <small class="text-muted">Alec. to Soft, California</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3rd Team Person -->
+          <div class="col-lg-3 col-md-6 col-sm-6 team-sqd">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://placebeard.it/450x450/3"
+                alt="Team Person"
+              />
+
+              <div class="card-body">
+                <h3>Jems Snow</h3>
+                <p>Web Developer</p>
+                <small class="text-muted">Alec. to Soft, California</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4th Team Person -->
+          <div class="col-lg-3 col-md-6 col-sm-6 team-sqd">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="https://placebeard.it/450x450/5"
+                alt="Team Person"
+              />
+
+              <div class="card-body">
+                <h3>Linister White</h3>
+                <p>Web Designer</p>
+                <small class="text-muted">Alec. to Soft, California</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Pricing Section  Start-->
+    <section id="pricing">
+      <div class="container">
+        <!-- VIP Main Heading -->
+        <div class="row heading-space">
+          <div class="col-md-12 text-center">
+            <h2>VIP Membership Tiers</h2>
+            <span></span>
+            <p class="mt-3">
+              Unlock exclusive privileges and content by becoming a member
+              today.
+            </p>
+          </div>
+        </div>
+
+        <!-- VIP Card Start -->
+        <div class="row heading-space">
+          <!-- VIP Level 1 -->
+          <div
+            class="col-lg-3 col-md-6 col-sm-6 pricing-sqd"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Bronze Member</h2>
+                <small class="text-muted">Entry-Level</small>
+              </div>
+
+              <div class="card-body">
+                <p>
+                  Gain access to our core services, including new content
+                  previews and exclusive member discounts.
+                </p>
+              </div>
+
+              <div class="card-footer prcs-footer">
+                <button class="btn btn-primary btn-block">
+                  <label class="float-left">Join Now</label>
+                  <label>
+                    <i class="float-right fas fa-star"></i>
+                  </label>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIP Level 2 -->
+          <div
+            class="col-lg-3 col-md-6 col-sm-6 pricing-sqd"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Silver Member</h2>
+                <small class="text-muted">Advanced</small>
+              </div>
+
+              <div class="card-body">
+                <p>
+                  All Bronze benefits plus priority customer support and a
+                  monthly member gift pack.
+                </p>
+              </div>
+
+              <div class="card-footer prcs-footer">
+                <button class="btn btn-primary btn-block">
+                  <label class="float-left">Join Now</label>
+                  <label>
+                    <i class="float-right fas fa-star"></i>
+                  </label>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIP Level 3 -->
+          <div
+            class="col-lg-3 col-md-6 col-sm-6 pricing-sqd"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Gold Member</h2>
+                <small class="text-muted">Premium</small>
+              </div>
+
+              <div class="card-body">
+                <p>
+                  All Silver benefits plus unlimited access to our entire
+                  content library and special invites to annual events.
+                </p>
+              </div>
+
+              <div class="card-footer prcs-footer">
+                <button class="btn btn-primary btn-block">
+                  <label class="float-left">Join Now</label>
+                  <label>
+                    <i class="float-right fas fa-star"></i>
+                  </label>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIP Level 4 -->
+          <div
+            class="col-lg-3 col-md-6 col-sm-6 pricing-sqd"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <!-- Card Start -->
+            <div class="card">
+              <div class="card-header">
+                <h2>Diamond Member</h2>
+                <small class="text-muted">Elite</small>
+              </div>
+
+              <div class="card-body">
+                <p>
+                  All Gold benefits plus one-on-one consultation services,
+                  priority booking for all events, and a premium gift box.
+                </p>
+              </div>
+
+              <div class="card-footer prcs-footer">
+                <button class="btn btn-primary btn-block">
+                  <label class="float-left">Join Now</label>
+                  <label>
+                    <i class="float-right fas fa-star"></i>
+                  </label>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section End-->
+
+    <!-- Location Section  Start-->
+    <section id="location">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 proposal-content">
+            <h2 data-aos="fade-right" data-aos-delay="100">Dolor sit amet</h2>
+            <small data-aos="fade-right" data-aos-delay="200">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              elementum augue sed est porttitor, ac blandit nisl posuere.
+              Pellentesque hendrerit suscipit mi eu lobortis. Curabitur
+              consectetur enim id elementum accumsan. Quisque metus purus,
+              iaculis id tincidunt non, blandit quis sapien.
+            </small>
+            <button
+              class="abt-btn btn btn-primary"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
+              Learn more
+            </button>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="https://placehold.co/320x156/2c3e50/fff?text=320x156"
+              class="img-fluid"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Location Section End-->
+
+    <!-- Try Us Section  Start-->
+    <section id="try-us">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-12 text-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h2 class="py-3 text-light">Try our innovative sevice</h2>
+            <button class="abt-btn btn btn-primary">Learn more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Try Us Section End-->
+
+    <!-- Footer Section Start-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-light pt-5">
+          <!-- About Us -->
+          <div
+            class="col-lg-3 col-md-6 footer-up"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <h3>About us</h3>
+            <p class="text-light m-0 text-justify">
+              Exercitation dolore in magna fugiat in ullamco magna esse nulla ex
+              ut. Quis anim pariatur ex Mollit labore. Occaecat anim.
+            </p>
+          </div>
+
+          <!-- Newsletter -->
+          <div
+            class="col-lg-3 col-md-6 footer-up"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <h3>Newsletter</h3>
+            <div class="form-sec">
+              <form class="form">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+                <button class="btn btn-custom">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Instagram -->
+          <div
+            class="col-lg-3 col-md-6"
+            id="insta"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <h3>Instagram</h3>
+
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="https://placebeard.it/450x450/11"
+                  class="img-fluid"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="https://placebeard.it/450x450/1"
+                  class="img-fluid"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="https://placebeard.it/450x450/13"
+                  class="img-fluid"
+                  alt="Instagram"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="https://placebeard.it/450x450/3"
+                  class="img-fluid"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="https://placebeard.it/450x450/6"
+                  class="img-fluid"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <img
+                  src="https://placebeard.it/450x450/8"
+                  class="img-fluid"
+                  alt="Instagram"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Follow Us -->
+          <div
+            class="col-lg-3 col-md-6"
+            id="follow"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <h3>Follow Us</h3>
+            <span class="d-block text-gray">Let us be social</span>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Fotter Copyright Section -->
+        <p class="py-2 m-0">
+          Copyright &copy; 2025 All rights reserved | made by
+          <span class="text-light">Tmpls</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Footer Section End-->
+
+    <!-- ========== Script Section ========== -->
+
+    <!-- JQuery JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Popper  JS-->
+    <!-- <script type="text/javascript" src="./vendor/jquery/popper.min.js"></script> -->
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js"
+      integrity="sha512-zKeerWHHuP3ar7kX2WKBSENzb+GJytFSBL6HrR2nPSR1kOX1qjm+oHooQtbDpDBSITgyl7QXZApvDfDWvKjkUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Font Awesome JS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/js/all.min.js"
+      integrity="sha512-gBYquPLlR76UWqCwD06/xwal4so02RjIR0oyG1TIhSGwmBTRrIkQbaPehPF8iwuY9jFikDHMGEelt0DtY7jtvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- JQuery Easing JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Aos Library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Custom JS -->
+    <!-- <script type="text/javascript" src="./js/main.js"></script> -->
+    <script>
+      (function ($) {
+        "use strict"; // Start of use strict
+
+        // Smooth scrolling using jQuery easing
+        $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+          if (
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+              $("html, body").animate(
+                {
+                  scrollTop: target.offset().top - 55,
+                },
+                1000,
+                "easeInOutExpo"
+              );
+              return false;
+            }
+          }
+        });
+
+        // Closes responsive menu when a scroll trigger link is clicked
+        $(".js-scroll-trigger").click(function () {
+          $(".navbar-collapse").collapse("hide");
+        });
+
+        // Activate scrollspy to add active class to navbar items on scroll
+        $("body").scrollspy({
+          target: "#mainNav",
+          offset: 100,
+        });
+      })(jQuery); // End of use strict
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // // Photo Filter
+        // let $btns = $('#portfolio .button-group button');
+
+        // $btns.click(function(e){
+
+        // 	$('#portfolio .button-group button').removeClass('active');
+
+        // 	e.target.classList.add('active');
+
+        // 	let selector = $(e.target).attr('data-filter');
+
+        // 	$('#portfolio .grid').isotope({
+        // 		filter:selector
+        // 	});
+
+        // 	return false;
+        // });
+
+        // // Photo Popup
+        // $('#portfolio .button-group #btn1').trigger('click');
+
+        // $('#portfolio .grid .test-popup-link').magnificPopup({
+        // 	type: 'image',
+        // 	gallery:{enabled:true}
+        // });
+
+        // //Owl Carousel
+        // $('#about-me .carousel-items .owl-carousel').owlCarousel({
+        // 	loop:true,
+        // 	dots:true,
+        // 	autoplay:true,
+        // 	responsive:{
+        // 		0:{
+        // 			items:1
+        // 		},
+        // 		544:{
+        // 			items:2
+        // 		}
+        // 	}
+        // });
+
+        // AOS Instance
+        AOS.init();
+
+        //Navbar
+        let nav_offset_top = $("#header").height() - 600;
+
+        function navbarFixed() {
+          if ($("#header").length) {
+            $(window).scroll(function () {
+              let scroll = $(window).scrollTop();
+
+              if (scroll >= nav_offset_top) {
+                $("#header  .navigation").addClass("topbar");
+              } else {
+                $("#header .navigation").removeClass("topbar");
+              }
+            });
+          }
+        }
+        navbarFixed();
+      });
+    </script>
+  </body>
+</html>
