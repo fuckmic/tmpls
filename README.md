@@ -9,11 +9,15 @@ https://www.loremflickr.com/
 https://placebeard.it/450x450/1
 https://placehold.co/500x500/2c3e50/fff?text=500x500
 
+https://placebeard.it/128x128/1
 
+
+https://placehold.co/48x48/2c3e50/fff?text=48x48
 
 ## TODO
 - 模板展示厅的数据.js
 - 渲染js，结局模板太多，html结构冗长。
+- 随机颜色值，作为展示厅无图的背景色
 
 
 ## widget 
@@ -21,7 +25,10 @@ https://placehold.co/500x500/2c3e50/fff?text=500x500
 - teams
 
 
-## spa 单页，只有一个html文件
+
+## 上架展示厅
+- spa_first
+- spa_second
 
 
 
