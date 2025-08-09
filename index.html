@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tmpls - 模板展示厅</title>
+    <!-- 使用 Tailwind CSS 加速开发，提供一致的响应式体验 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* ======================================
+           自定义样式
+           ====================================== */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #334155;
+        line-height: 1.6;
+      }
+
+      /* 标题和副标题的自定义样式 */
+      .header-section {
+        padding: 8rem 2rem;
+        text-align: center;
+        background: #ffffff;
+      }
+
+      .main-heading {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .sub-heading {
+        font-size: 1.25rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* 模板和案例卡的样式 */
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-description {
+        color: #64748b;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      /* 按钮的样式 */
+      .btn-group {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: auto;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-primary {
+        background-color: #0d9488; /* 绿色系主色 */
+        color: #ffffff;
+      }
+
+      .btn-primary:hover {
+        background-color: #0f766e;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background-color: #e2e8f0;
+        color: #475569;
+      }
+
+      .btn-secondary:hover {
+        background-color: #cbd5e1;
+        transform: translateY(-2px);
+      }
+
+      /* 页脚样式 */
+      .footer-section {
+        padding: 4rem 2rem;
+        text-align: center;
+        color: #94a3b8;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      /* ======================================
+           响应式设计
+           ====================================== */
+      @media (max-width: 768px) {
+        .header-section {
+          padding: 6rem 1rem;
+        }
+
+        .main-heading {
+          font-size: 2.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1rem;
+        }
+
+        .card-title {
+          font-size: 1.25rem;
+        }
+
+        .btn-group {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- 顶部标题和描述 -->
+    <header class="header-section">
+      <h1 class="main-heading">Tmpls 模板展示厅</h1>
+      <p class="sub-heading">
+        在这里，你可以预览我们精心设计的通用模板。每个模板都是一个独立的静态页面，便于快速部署和定制。
+      </p>
+    </header>
+
+    <!-- 模板列表 -->
+    <section class="py-12 md:py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-extrabold text-center mb-10 md:mb-16">
+          模板列表
+        </h2>
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- 第一个模板卡片 -->
+          <div class="card">
+            <img
+              src="https://placehold.co/600x400/0d9488/fff?text=First"
+              alt="First Template"
+              class="card-image"
+            />
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">模板一 (First)</h3>
+                <p class="card-description">
+                  这是一套现代、简洁的品牌官网模板，适合初创公司和个人作品集。
+                </p>
+              </div>
+              <div class="btn-group">
+                <a
+                  href="./first/index.html"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i> 预览
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二个模板卡片 -->
+          <div class="card">
+            <img
+              src="https://placehold.co/600x400/94a3b8/fff?text=Second"
+              alt="Second Template"
+              class="card-image"
+            />
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">模板二 (Second)</h3>
+                <p class="card-description">
+                  适用于电商或产品展示的模板，设计风格干净，注重产品细节。
+                </p>
+              </div>
+              <div class="btn-group">
+                <a
+                  href="./second/index.html"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i> 预览
+                </a>
+                <a href="#" class="btn btn-secondary">
+                  <i class="fas fa-code"></i> 查看源码
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第三个模板卡片 -->
+          <div class="card">
+            <img
+              src="https://placehold.co/600x400/22c55e/fff?text=Third"
+              alt="Third Template"
+              class="card-image"
+            />
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">模板三 (Third)</h3>
+                <p class="card-description">
+                  一套创意的个人博客模板，用生动的排版来展现内容。
+                </p>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> 预览
+                </a>
+                <a href="#" class="btn btn-secondary">
+                  <i class="fas fa-code"></i> 查看源码
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 成功案例展示 -->
+    <section class="bg-white py-12 md:py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-extrabold text-center mb-10 md:mb-16">
+          成功案例
+        </h2>
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- 案例一 -->
+          <div class="card">
+            <img
+              src="https://placehold.co/600x400/f59e0b/fff?text=Client+A"
+              alt="Client A Website"
+              class="card-image"
+            />
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">Client A 官网</h3>
+                <p class="card-description">
+                  基于“模板一”定制化开发的商业官网，为客户带来了可观的转化。
+                </p>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> 查看网站
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 案例二 -->
+          <div class="card">
+            <img
+              src="https://placehold.co/600x400/3b82f6/fff?text=Client+B"
+              alt="Client B Website"
+              class="card-image"
+            />
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">Client B 产品页</h3>
+                <p class="card-description">
+                  结合“模板二”的灵活组件，打造的产品展示单页，突出产品卖点。
+                </p>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> 查看网站
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 案例三 -->
+          <div class="card">
+            <img
+              src="https://placehold.co/600x400/a855f7/fff?text=Client+C"
+              alt="Client C Website"
+              class="card-image"
+            />
+            <div class="card-content">
+              <div>
+                <h3 class="card-title">Client C 个人博客</h3>
+                <p class="card-description">
+                  在“模板三”基础上进行定制，一个优雅且富有创意的个人博客。
+                </p>
+              </div>
+              <div class="btn-group">
+                <a href="#" class="btn btn-primary" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> 查看网站
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-section">
+      <p>&copy; 2025 Tmpls. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
